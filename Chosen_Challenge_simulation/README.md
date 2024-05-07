@@ -1,5 +1,5 @@
 ﻿
--The main script in the Chosen Challenge Attack simulation is the “ChosenChallengeAttack_Simulation.m” file.
+-The main script regarding the Chosen Challenge Attack simulation is the “ChosenChallengeAttack_Simulation.m” file.
 
 -For evaluating the FPGA implementation results, the main script would be the “ChosenChallengeAttack_implementation.m” file.
 Before that, the implementation of PUF on FPGA and getting the results has been done using the [DA_PUF_Library](https://github.com/scluconn/DA_PUF_Library/tree/master/FPGA_implementation/XORPUF)
