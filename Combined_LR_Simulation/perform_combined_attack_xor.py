@@ -47,7 +47,9 @@ attack_parameters = {'num_pufs_to_attack': 1,
                      'add_validation': True,
                      'add_puf_to_fit': True,
                      'perform_reliability_attack': True,
-                     'perform_NFPr_attack':True,
+                     'perform_NFPr_attack':True, 
+                     #when 'perform_NFPr_attack' is 'True', the Combined Chosen Challenge attack is done (which is based on non-flipping probability information),
+                     #and when it is 'False', the Combined Reliability based attack is done. The 'True' value has the priority for this parameter.
                      'nSamples':16,
                      'num_flips_for_NFPr':1,
                      'reliability_repetitions': 17,# it was 10 originallyy
