@@ -113,17 +113,9 @@ n=size(ExpandedChallengesSet,1);
 DecChalSet  = zeros(n,8);
 DecChalSet2 = DecChalGen(ExpandedChallengesSet,ChalSize,8);
 
-ChalFile='Challenge_6XOR_40k.mat';
+ChalFile='Challenge_nXOR.mat';
 save(ChalFile,'TrainSet');
 
-NFPrFile='NonFlippingPr_6XOR_40k.mat';
-save(NFPrFile,'nonFlippingProbability');
-
-TestFile='ChalTest_6XOR_40k.mat';
-save(TestFile,'TestSet');
-
-TestResp='RespTest_6XOR_40k.mat';
-save(TestResp,'ResponseTest');
 %**************************************************************************
 % measuring the Reliability of simulated XORPUF
 % It's not related to the attack, just for our information
