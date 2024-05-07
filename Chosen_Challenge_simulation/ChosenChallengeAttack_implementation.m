@@ -6,7 +6,7 @@ clc;
 % loaded from FPGA
 %**************************************************************************
 ChalSize = 64;    % Bit length of challenge
-nXOR = 3;         % number of APUFs in n-XOR APUF
+nXOR = 5;         % number of APUFs in n-XOR APUF
 nCMAESRun=3;      % number of CMA-ES running
 nSamples = 16;    % number of chosen challenges sampled around centroid challenge
 nTest=50000;
@@ -17,17 +17,18 @@ nTest=50000;
 % the data transfered to FPGA's interface are decimal
 % Convert decimal challenge set to binary Challenge set.
 
-%load('chosen_challenges1.mat');%%Chenglu's extracted challenge
-load('chosen_challenges50K.mat');%nTrain=50K
-%BinaryChalSet=Dec2Binary(Chal);
+load('chosen_challenges1.mat');
+%load('chosen_challenges50K.mat');%nTrain=50K
+
+BinaryChalSet=Dec2Binary(Chal); %'Chal': the variable name saved in loaded challenge file
 %or:
-BinaryChalSet=Dec2Binary(DecChalSet2);
+%BinaryChalSet=Dec2Binary(DecChalSet2);
 
 
 %Loading implemented PUF response file that had been stored from FPGA:
 
-%load("virtual_5XOR_responses.mat");%Chenglu's extracted responses
-load('respAvg_50Ktrain_3XOR.mat')
+load("virtual_5XOR_responses.mat");
+%load('respAvg_50Ktrain_3XOR.mat')
 %**************************************************************************
 % Extract the centroid CRPs of data set:
 %**************************************************************************
