@@ -7,6 +7,13 @@ clc;
 % The PUF weight model is generated using normal distribution with Mu=0 and
 % Sigma=1
 % challenge set is generated randomly 
+% During nCMAESRun, a simulated n-XOR APUF is modeled by Chosen Challenge Attack.
+
+% This script is being used for measuring the correlation between the delay difference and the non-flipping probability through the training dataset.
+% And the correlation between the absolute value of delay difference and the non-flipping probability.
+% Finally, the convergence rate of individual APUFs can be calculated from the 'MatchingRateMultipleTimes'.
+% We can see that the |Delay difference| correlation and the convergence rate of APUFs are generally related.
+ 
 
 %**************************************************************************
 % Create a Simulated model for Arbiter PUF
@@ -22,7 +29,7 @@ Evaluations_R =10;% multiple evaluations for measuring Reliability of PUF
 
 SigmaNoise=0;% noise of simulated responses follows a normal distribution with standard deviation of SigmaNoise
                   % SigmaNoise = 0 means a reliable PUF
-nCMAESRun=1;      % number of CMA-ES running
+nCMAESRun=150;      % number of CMA-ES running
 nSamples = 16;    % number of chosen challenges sampled around centroid challenge
 FlipNum=1;        % number of flips we have in Phi vector
 
